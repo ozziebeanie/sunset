@@ -2,13 +2,14 @@ import os
 import discord
 from discord.ext import commands
 import tokenid
+import activitya
 from pretty_help import PrettyHelp
 
 bot = commands.Bot(
 	command_prefix=["s!", "r!"],  # Change to desired prefix
 	case_insensitive=True,
-    activity= discord.Streaming(name="r!help or s!help", url="https://www.twitch.tv/ozziebeanie"),
     status=discord.Status.idle,
+    activity=activitya.activity,
     help_command=PrettyHelp()
 )
 
