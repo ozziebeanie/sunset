@@ -8,8 +8,8 @@ from pretty_help import PrettyHelp
 bot = commands.Bot(
 	command_prefix=["s!", "r!"],  # Change to desired prefix
 	case_insensitive=True,
-    status=discord.Status.idle,
-    activity=activitya.activity,
+    status=discord.Status.do_not_disturb,
+    activity = discord.Streaming(name="r!help or s!help", url="https://www.twitch.tv/ozziebeanie"),
     help_command=PrettyHelp()
 )
 
