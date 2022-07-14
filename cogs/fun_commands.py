@@ -2,9 +2,9 @@ import discord
 from discord.ext import commands
 
 class FunCommands(commands.Cog):
-    """
+    '''
     Contains fun commands, activities and more!
-    """
+    '''
     def __init__(self, bot,):
         self.bot = bot
 
@@ -32,9 +32,9 @@ class FunCommands(commands.Cog):
         '''
         Waves at the chosen person.
         '''
-      embed = discord.Embed(title=f"{ctx.author.name} waved at {member.name}")
-      embed.set_image(url="https://c.tenor.com/uGN3n2O03GIAAAAC/anime-wave.gif")
-      await ctx.send(embed=embed)
+        embed = discord.Embed(title=f"{ctx.author.name} waved at {member.name}")
+        embed.set_image(url="https://c.tenor.com/uGN3n2O03GIAAAAC/anime-wave.gif")
+        await ctx.send(embed=embed)
 
     @commands.command()
     async def kill(self, ctx, member: discord.Member):

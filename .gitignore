@@ -1,3 +1,4 @@
 tokenid.py
 __pycache__/tokenid.cpython-39.pyc
 __pycache__/activitya.cpython-39.pyc
+*.pyc
