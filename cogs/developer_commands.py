@@ -72,6 +72,9 @@ class DevCommands(commands.Cog, name='Developer Commands'):
 
 	@commands.command()
 	async def shutdown(self, ctx):
+		'''
+		Shuts the bot off.
+		'''
 		await ctx.bot.logout()
 
 	@commands.command(description="Bots latency.")

@@ -9,15 +9,31 @@ class MathCommands(commands.Cog, name='Math Commands'):
 
     @commands.command()
     async def add(self, ctx, a: int, b: int):
+        '''
+        Makes the bot do math.
+        '''
         await ctx.send(a + b)
 
     @commands.command()
     async def sub(self, ctx, a: int, b: int):
+        '''
+        Makes the bot do math.
+        '''
         await ctx.send(a - b)
 
     @commands.command()
     async def mult(self, ctx, a: int, b: int):
+        '''
+        Makes the bot do math.
+        '''
         await ctx.send(a * b)
-    
+
+    @commands.command()
+    async def div(self, ctx, a: int, b: int):
+        '''
+        Makes the bot do math.
+        '''
+        await ctx.send(a / b)
+
 def setup(bot):
     bot.add_cog(MathCommands(bot))

@@ -9,11 +9,17 @@ class VoiceCommands(commands.Cog, name='Voice Commands'):
 
     @commands.command()
     async def join(self, ctx):
+        '''
+        Makes the bot join a vc.
+        '''
         channel = ctx.author.voice.channel
         await channel.connect()
 
     @commands.command()
     async def leave(self, ctx):
+        '''
+        Makes the bot leave the vc it's in.
+        '''
         channel = ctx.author.voice.channel
         await ctx.voice_client.disconnect()
     
