@@ -77,10 +77,6 @@ class DevCommands(commands.Cog, name='Developer Commands'):
 		'''
 		await ctx.bot.logout()
 
-	@commands.command(description="Bots latency.")
-	async def ping(self, ctx):
-		latency = round(self.bot.latency * 1000)
-		await ctx.send(f"Pong! My latency is {latency}ms.")
 
 def setup(bot):
 	bot.add_cog(DevCommands(bot))

@@ -8,7 +8,7 @@ bot = commands.Bot(
 	command_prefix=["s!", "r!"],  # Change to desired prefix
 	case_insensitive=True,
     status=discord.Status.do_not_disturb, # Sets the bots status to DND
-    activity = discord.Streaming(name="r!help or s!help", url="https://www.twitch.tv/ozziebeanie"), # Sets the bots activity to Streaming and sets watch button to twitch channel
+    activity = discord.Streaming(name="s!help or r!help", url="https://www.twitch.tv/ozziebeanie"), # Sets the bots activity to Streaming and sets watch button to twitch channel
     help_command=PrettyHelp()
 )
 

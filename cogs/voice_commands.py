@@ -23,5 +23,7 @@ class VoiceCommands(commands.Cog, name='Voice Commands'):
         channel = ctx.author.voice.channel
         await ctx.voice_client.disconnect()
     
+    
+
 def setup(bot):
     bot.add_cog(VoiceCommands(bot))
