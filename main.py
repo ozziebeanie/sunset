@@ -16,8 +16,15 @@ bot.author_id = 797147193907740702 # Change to your discord id!!!
 
 @bot.event 
 async def on_ready():  # When the bot is ready
-    print("I'm in")
-    print(bot.user)  # Prints the bot's username and identifier
+	os.system('clear')
+	print(f"""
+		I'm in
+
+		Bot:
+		{bot.user}
+		""")
+    #print("I'm in")
+    #print(bot.user)  # Prints the bot's username and identifier
 
 extensions = [
 	'cogs.developer_commands', 'cogs.basic_commands', 'cogs.fun_commands', 'cogs.math_commands', 'cogs.voice_commands',  # Same name as it would be if you were importing it

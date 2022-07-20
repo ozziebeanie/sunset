@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import os
 
 
 class DevCommands(commands.Cog, name='Developer Commands'):
@@ -76,6 +77,26 @@ class DevCommands(commands.Cog, name='Developer Commands'):
 		Shuts the bot off.
 		'''
 		await ctx.bot.logout()
+
+	@commands.command()
+	async def serverids(self, ctx):
+		print(self.bot.guilds)
+		servers = list(self.bot.guilds)
+		await ctx.send(f"{self.bot.guilds}")
+
+	@commands.command()
+	async def clearerror(self, ctx):
+		'''
+		Command made for linux
+		'''
+		os.system('clear')
+		print(f"""
+
+			Console was cleared.
+
+			Bot running:
+			{self.bot.user}
+			""")
 
 
 def setup(bot):

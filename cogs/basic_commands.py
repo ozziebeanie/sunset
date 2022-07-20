@@ -17,6 +17,9 @@ class BasicCommands(commands.Cog, name='Basic Commands'):
     
     @commands.command()
     async def verify(self, ctx):
+        '''
+        Gives the verify role within the "Sunset Servers" server.
+        '''
         member = ctx.message.author
         for guild_role in member.guild.roles:
           if guild_role.name == "verified":
@@ -30,6 +33,14 @@ class BasicCommands(commands.Cog, name='Basic Commands'):
         '''
         latency = round(self.bot.latency * 1000)
         await ctx.send(f"Pong! My latency is {latency}ms.")
+
+    @commands.command()
+    async def servers(self, ctx):
+        '''
+        Shows how many servers the bot has joined.
+        '''
+        servers = list(self.bot.guilds)
+        await ctx.send(f"I have joined over {str(len(servers))} servers.")
 
 def setup(bot):
     bot.add_cog(BasicCommands(bot))
